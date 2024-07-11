@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografar e Descriptografar Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Criptografar e Descriptografar Texto</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="#contact" onclick="scrollToContact()">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section-container">
+            <h2>Bem-vindo à nossa ferramenta</h2>
+            <p>Utilize a ferramenta abaixo para criptografar e descriptografar seus textos utilizando a cifra de César.</p>
+            <div class="painel">
+                <label for="inputText">Texto de Entrada:</label>
+                <textarea id="inputText" placeholder="Digite o texto aqui..."></textarea>
+                <div class="botoes">
+                    <button onclick="criptografar()">Criptografar</button>
+                    <button onclick="descriptografar()">Descriptografar</button>
+                    <button onclick="limpar()">Limpar</button>
+                </div>
+                <label for="outputText">Texto de Saída:</label>
+                <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
+            </div>
+            <div class="info">
+                <p>Escolha a quantidade de deslocamento para a cifra de César:</p>
+                <input type="range" id="deslocamento" min="1" max="25" value="3" oninput="atualizarDeslocamento()">
+                <span id="valorDeslocamento">3</span>
+            </div>
+        </section>
+
+        <section id="features" class="section-container">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li>Criptografia de textos usando cifra de César</li>
+                <li>Descriptografia de textos usando cifra de César</li>
+                <li>Escolha personalizada do valor de deslocamento</li>
+                <li>Interface limpa e fácil de usar</li>
+            </ul>
+        </section>
+
+        <section id="about" class="section-container">
+            <h2>Sobre</h2>
+            <p>Esta ferramenta foi desenvolvida como parte de um projeto acadêmico para demonstrar a aplicação de criptografia simples utilizando a cifra de César.</p>
+            <p>Nosso objetivo é fornecer uma interface amigável e eficiente para usuários que desejam experimentar a criptografia básica de textos.</p>
+        </section>
+
+        <section id="contact" class="section-container">
+            <h2>Contato</h2>
+            <p>Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato conosco através do formulário abaixo:</p>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome...">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Seu email...">
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" placeholder="Sua mensagem..."></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido como trabalho final do curso Alura</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        function scrollToContact() {
+            const section = document.getElementById('contact');
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

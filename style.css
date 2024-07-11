@@ -1,0 +1,191 @@
+/* Definição das variáveis de cores */
+:root {
+    --background-color: #000000;
+    --text-color: #B8621B;
+    --button-color: #B8621B;
+    --button-hover-color: #262A56;
+    --button-shadow-color: #E3CCAE;
+    --panel-background: #000000;
+    --panel-border: #262A56;
+    --panel-box-shadow: 0 0 0.25rem var(--button-shadow-color);
+}
+
+/* Estilos gerais do documento */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: var(--panel-background);
+    padding: 1rem 0;
+    box-shadow: var(--panel-box-shadow);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    color: var(--button-color);
+    text-shadow: 0 0 0.3125rem var(--button-color), 0 0 0.625rem var(--button-color), 0 0 1.25rem var(--button-color);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--button-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--button-hover-color);
+}
+
+/* Estilos das seções */
+.section-container {
+    padding: 4rem 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: left;
+    background-color: var(--panel-background);
+    box-shadow: var(--panel-box-shadow);
+    border-radius: 0.625rem;
+    margin-top: 2rem;
+}
+
+.section-container h2 {
+    color: var(--button-color);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.section-container p {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.section-container ul {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+/* Estilos do painel de criptografia */
+.painel {
+    background-color: var(--panel-background);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--panel-box-shadow);
+    max-width: 40rem;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+    color: var(--button-color);
+}
+
+textarea, input[type="text"], input[type="email"] {
+    width: 100%;
+    margin: 1.25rem 0;
+    padding: 0.75rem;
+    border: 0.125rem solid var(--panel-border);
+    border-radius: 0.3125rem;
+    background-color: var(--background-color);
+    color: var(--button-color);
+    font-size: 1rem;
+    box-shadow: 0 0 0.3125rem var(--panel-border);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea {
+    height: 8rem;
+}
+
+input[type="text"], input[type="email"] {
+    height: 3rem;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    box-shadow: 0 0 0.3125rem var(--button-shadow-color), 0 0 0.625rem var(--button-shadow-color);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 0.625rem var(--button-shadow-color), 0 0 1rem var(--button-shadow-color);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.info {
+    margin-top: 2rem;
+    color: var(--button-color);
+}
+
+input[type="range"] {
+    width: 80%;
+    margin: 1rem 0;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: var(--panel-background);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: var(--panel-box-shadow);
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    color: var(--button-color);
+    font-size: 0.875rem;
+}
