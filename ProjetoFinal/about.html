@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Criptografia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Criptografia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="section-container">
+            <h2>Início</h2>
+            <p>Bem-vindo à página de criptografia.</p>
+            <p><a href="index.html">Voltar à página principal</a></p> <!-- Link para voltar ao topo da página -->
+        </section>
+
+        <section id="sobre" class="section-container">
+            <h2>Sobre</h2>
+            <p>Somos uma equipe dedicada à educação e desenvolvimento de soluções em criptografia de dados.</p>
+        </section>
+
+        <section id="contato" class="section-container">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco:</p>
+            <ul>
+                <li><strong>Instagram:</strong> <a href="https://www.instagram.com/nigel3d?igsh=MXh3dzVhcWVnMTFrcA==" target="_blank">Nigel 3D Impressões</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/miguel-de-araujo-professor?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Miguel Ferreira</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Agradecimento especial a parceria da Oracle+Alura</p>
+    </footer>
+
+    <script>
+        // Função para scroll suave ao clicar nos links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const sectionId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(sectionId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80, // Ajuste de margem para o cabeçalho fixo
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
